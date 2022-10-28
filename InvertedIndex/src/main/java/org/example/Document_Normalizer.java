@@ -24,27 +24,41 @@ public class Document_Normalizer {
         String StopwordsText = new String(Files.readAllBytes(Paths.get("./En_stopwords2.txt")));
         String[] stopwords = StopwordsText.split(",");
         Set<String> StopwordsSet = new HashSet<String>(Arrays.asList(stopwords));
-
-        HashMap<String, ArrayList<Integer>> map = new HashMap<String, ArrayList<Integer>>();
-        Integer line = 1;
+        System.out.println(LinesList.get(4551));
+        HashMap<String, Set<Integer>> map = new HashMap<String, Set<Integer>>();
+        int line = 1;
         for (String cadena: LinesList) {
-            ArrayList<Integer> temp = new ArrayList<Integer>();
-            String[] words = cadena.split(" ");
-            List<String> wordsList = new ArrayList<String>(Arrays.asList(words));
-            for (String word: wordsList){
-                if (word != ""){
-                    if (StopwordsSet.contains(word)){
-                        continue;
-                    }else{
-                        if (map.containsKey(word)){
-                            ArrayList<Integer> temp3 = map.get(word);
-                            temp3.add(line);
-                            map.replace(word,temp3);
-                        }else if (!map.containsKey(word)) {
-                            temp.add(line);
-                            map.put(word,temp);
+            if(!cadena.isBlank() | !cadena.isEmpty()) {
+
+                Set<Integer> temp = new HashSet<Integer>();
+                String[] words = cadena.split(" ");
+                List<String> wordsList = new ArrayList<String>(Arrays.asList(words));
+
+                for (String word : wordsList) {
+                    if (word != "" && !word.isBlank()) {
+                        if (StopwordsSet.contains(word)) {
+                            continue;
+                        } else {
+                            if (!map.containsKey(word)) {
+                                temp.add(line);
+                                Set<Integer> temp2 = new HashSet<Integer>();
+                                temp2.addAll(temp);
+                                map.put(word, temp2);
+                                temp.clear();
+                                if(line==4552){
+                                    System.out.println(word);}
+                            }
+                            else if (map.containsKey(word)) {
+                                Set<Integer> temp3 = map.get(word);
+                                temp3.add(line);
+                                map.replace(word, temp3);
+                                if(line==4552){
+                                    System.out.println(word+"!!!!");}
+
+                            }
                         }
                     }
+
                 }
             }
             line += 1;
