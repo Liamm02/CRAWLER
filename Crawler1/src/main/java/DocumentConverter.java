@@ -11,7 +11,7 @@ public class DocumentConverter {
         ObjectMapper mapper = new ObjectMapper();
         try{
             //importing utf-8 text file
-            File jsonFile = new File("C:\\Users\\krish\\Documents\\pg69250.txt");
+            File jsonFile = new File("\\Documents\\pg69250.txt");
             JsonBuilder builder = mapper.readValue(jsonFile,JsonBuilder.class);
             System.out.println(builder);
 
