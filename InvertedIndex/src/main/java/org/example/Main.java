@@ -23,7 +23,7 @@ public class Main {
 
         HashMap<String, Set<Integer>> Doc_InvertedIndex = dn.Stopwords_Deleter(text);
         Document_indexer di = new Document_indexer();
-        di.Indexer(Doc_InvertedIndex);
+        di.Indexer(Doc_InvertedIndex,documents.get(2),path);
 
 
     }
