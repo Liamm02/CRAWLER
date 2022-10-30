@@ -14,7 +14,7 @@ public class FileGenerator {
 
         assert listOfFiles != null;
         for (File file : listOfFiles) {
-            if (file.isFile() && FileChecker.check(file)) {
+            if (file.isFile() && FileChecker.check(folder, file)) {
 
                BufferedReader br = FileCollector.read(file, folder);
 
