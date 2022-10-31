@@ -1,0 +1,4 @@
+This is a test file, that has, some punctuation!!!!
+With this file [3]. we will check the Document_normalizer.translator function.
+Output: will not have any punctuation characters---!
+And¡¡ will   be !!!split by LiNes**/
