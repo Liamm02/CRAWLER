@@ -11,7 +11,7 @@ import java.util.TimerTask;
 
 public class TimeTask_Gutenberg{
 
-    long delay = 10 * 1000; // delay in milliseconds
+    long delay = 60 * 1000; // delay in milliseconds
     LoopTask task = new LoopTask();
     Timer timer = new Timer("Printing");
     String path;
