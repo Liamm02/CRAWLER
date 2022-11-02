@@ -6,11 +6,9 @@ The code performs the following functions:
 
 1- Check if every file and folder we need is ready, and prepare them if they are not.
 
-2- Preprocesses the data in the text collection (stop words removal, stemming, removing punctuations etc.)
+2- Download and store documents.
 
 3- Extract metadata from text files.
-
-4- Download and store documents.
 
 5- Repeat the process every minute.
 
