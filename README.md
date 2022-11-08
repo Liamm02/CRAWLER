@@ -20,23 +20,23 @@ Ensure all the files from the repo are present in the same directory.
 Open the project in any preferred IDE of your choice and run the Main.java file, on the Crawler_Package foulder.
 
 ## Detailed List of Functionalities Implemented ⚙️
-### In the foulder InvertedIndex:
+### In the folder InvertedIndex:
 
-It is similar to the inverted index project made previously in python but now in java
+It is similar to the inverted index project made previously in python but now in java.
 
-### In the foulder Crawler
+### In the folder Crawler
 
-### In the foulder Crawler_Package
+### In the folder Crawler_Package
 
 Main module of the project, automates the process to do it every minute
 
-### In the foulder Downloader
+### In the folder Downloader
 
 Download and store the files of the Project Gutenberg collection
 
-### In the foulder MetaData_Extractor
+### In the folder MetaData_Extractor
 
-Extract metadata from text file and save it in json format
+Extract metadata from text file and save it in Json format
 
 ## Built With 🛠️
 
